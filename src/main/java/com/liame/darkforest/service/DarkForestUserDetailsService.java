@@ -20,11 +20,8 @@ public class DarkForestUserDetailsService implements UserDetailsService {
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
         User user = repo.findByUsername(username);
         if(user == null) {
-            System.out.println("User not found peepee");
-
             throw new UsernameNotFoundException("User " + username + " not found");
         }
         return new UserPrincipal(user);

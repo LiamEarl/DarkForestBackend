@@ -18,6 +18,7 @@ public class UserService {
     private AuthenticationManager authManager;
     private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(11);
     private JWTService jwtService;
+
     public UserService(UserRepository repo, AuthenticationManager authManager, JWTService jwtService) {
         this.repo = repo;
         this.authManager = authManager;
@@ -27,16 +28,21 @@ public class UserService {
     //private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
     @Transactional
     public User register(User user) {
+        if(repo.findByUsername(user.getUsername()) != null) {
+            throw new RuntimeException("Username is already in use");
+        }
         user.setPassword(encoder.encode(user.getPassword()));
-        User savedUser = this.repo.save(user);
-        return savedUser;
-        //user.setPassword(encoder.encode(user.getPassword()));
+        return this.repo.save(user);
+    }
+
+    public User find(String username) {
+        return this.repo.findByUsername(username);
     }
 
     public String verify(User user) {
         Authentication authentication =
                 authManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
         if(authentication.isAuthenticated()) return jwtService.generateToken(user.getUsername());
-        return "Fail";
+        return "FAILED";
     }
 }
