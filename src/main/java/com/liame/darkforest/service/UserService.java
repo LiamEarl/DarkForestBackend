@@ -26,7 +26,6 @@ public class UserService {
     }
 
     //private BCryptPasswordEncoder encoder = new BCryptPasswordEncoder(12);
-    @Transactional
     public User register(User user) {
         if(repo.findByUsername(user.getUsername()) != null) {
             throw new RuntimeException("Username is already in use");

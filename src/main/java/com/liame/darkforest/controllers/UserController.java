@@ -30,5 +30,4 @@ public class UserController {
     public LoginDTO login(@RequestBody User user) {
         return new LoginDTO(new UserDTO(service.find(user.getUsername())), service.verify(user));
     }
-
 }

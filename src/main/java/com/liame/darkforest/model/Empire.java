@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name="Empires")
+@Table(name="empires")
 public class Empire {
     @Id
     @GeneratedValue

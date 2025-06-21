@@ -17,7 +17,7 @@ public class EmpireService {
         this.empireRepository = empireRepository;
     }
 
-    @Transactional
+
     public Empire create(EmpireDTO empireDto, User owner) {
         Empire createdEmpire = new Empire();
         createdEmpire.setName(empireDto.getName());

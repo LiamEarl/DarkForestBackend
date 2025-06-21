@@ -5,16 +5,13 @@ import lombok.*;
 import org.springframework.data.annotation.Version;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 @Getter
 @Setter
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Version
-    private Long version = 1L;
 
     private String username;
     private String password;
