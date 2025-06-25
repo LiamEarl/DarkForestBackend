@@ -28,9 +28,9 @@ public class EmpireController {
     }
 
     @PostMapping("/create")
-    public Empire createEmpire(@RequestBody EmpireDTO empire,  Authentication authentication) {
+    public Empire createEmpire(@RequestBody EmpireDTO empire, Authentication authentication) {
         String username = authentication.getName();
-        System.out.println("NAME FOUND: " + username);
+
         User owner = userRepository.findByUsername(username);
         if(owner == null) {
             throw new UsernameNotFoundException("User " + username + " not found");
