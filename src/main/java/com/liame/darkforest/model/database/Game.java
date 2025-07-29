@@ -1,4 +1,4 @@
-package com.liame.darkforest.model;
+package com.liame.darkforest.model.database;
 import jakarta.persistence.*;
 import lombok.*;
 

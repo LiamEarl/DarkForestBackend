@@ -1,6 +1,6 @@
 package com.liame.darkforest.dto;
 
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

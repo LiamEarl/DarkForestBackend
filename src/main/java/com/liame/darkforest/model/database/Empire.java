@@ -1,4 +1,4 @@
-package com.liame.darkforest.model;
+package com.liame.darkforest.model.database;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

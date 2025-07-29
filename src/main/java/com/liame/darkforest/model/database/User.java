@@ -1,8 +1,7 @@
-package com.liame.darkforest.model;
+package com.liame.darkforest.model.database;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Version;
 
 @Entity
 @Table(name = "users")

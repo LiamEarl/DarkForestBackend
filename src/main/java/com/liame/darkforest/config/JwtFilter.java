@@ -20,7 +20,6 @@ import java.io.IOException;
 public class JwtFilter extends OncePerRequestFilter {
 
     private JWTService jwtService;
-
     private ApplicationContext context;
 
     public JwtFilter(JWTService jwtService, ApplicationContext context) {

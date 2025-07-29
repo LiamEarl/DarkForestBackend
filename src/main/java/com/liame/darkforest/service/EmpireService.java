@@ -1,12 +1,10 @@
 package com.liame.darkforest.service;
 
 import com.liame.darkforest.dto.EmpireDTO;
-import com.liame.darkforest.model.Empire;
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.Empire;
+import com.liame.darkforest.model.database.User;
 import com.liame.darkforest.repo.EmpireRepository;
-import com.liame.darkforest.repo.UserRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class EmpireService {

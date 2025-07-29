@@ -2,12 +2,8 @@ package com.liame.darkforest.controllers;
 
 import com.liame.darkforest.dto.LoginDTO;
 import com.liame.darkforest.dto.UserDTO;
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.User;
 import com.liame.darkforest.service.UserService;
-import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

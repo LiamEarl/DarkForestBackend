@@ -1,7 +1,7 @@
 package com.liame.darkforest.service;
 
-import com.liame.darkforest.model.Game;
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.Game;
+import com.liame.darkforest.model.database.User;
 import com.liame.darkforest.repo.GameRepository;
 import com.liame.darkforest.repo.UserRepository;
 import org.springframework.http.ResponseEntity;

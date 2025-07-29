@@ -1,7 +1,7 @@
 package com.liame.darkforest.controllers;
 import com.liame.darkforest.dto.UserDTO;
-import com.liame.darkforest.model.Game;
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.Game;
+import com.liame.darkforest.model.database.User;
 import com.liame.darkforest.service.GameService;
 import com.liame.darkforest.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -11,11 +11,11 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/api/games")
-public class GameController {
+public class LobbyController {
     private GameService gameService;
     private UserService userService;
 
-    public GameController(GameService gameService, UserService userService) {
+    public LobbyController(GameService gameService, UserService userService) {
         this.gameService = gameService;
         this.userService = userService;
     }

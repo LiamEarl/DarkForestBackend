@@ -1,9 +1,7 @@
 package com.liame.darkforest.repo;
 
-import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
-import com.liame.darkforest.model.User;
-import org.springframework.data.jpa.repository.Lock;
+import com.liame.darkforest.model.database.User;
 import org.springframework.stereotype.Repository;
 
 @Repository

@@ -1,8 +1,7 @@
 package com.liame.darkforest.service;
-import com.liame.darkforest.model.UserPrincipal;
+import com.liame.darkforest.model.database.UserPrincipal;
 import com.liame.darkforest.repo.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.liame.darkforest.model.User;
+import com.liame.darkforest.model.database.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
